@@ -1,7 +1,9 @@
 import vue from '@vitejs/plugin-vue'
+import {defineConfig} from 'vite'
 
-const config = {
-  plugin: [vue],
-}
-
-export default config
+export default defineConfig({
+  test: {
+    environment: 'jsdom'
+  },
+  plugins: [vue()]
+})
